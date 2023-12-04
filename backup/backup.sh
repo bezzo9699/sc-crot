@@ -111,7 +111,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/myridwan/backup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/bezzo9699/backup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -131,15 +131,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 Save_And_Exit () {
     DATE=$(date +'%d %B %Y')
     cd /root/user-backup
-    git config --global user.email "alnurridwan112@gmail.com" &> /dev/null
-    git config --global user.name "myridwan" &> /dev/null
+    git config --global user.email "bezzo9699@gmail.com" &> /dev/null
+    git config --global user.name "bezzo9699" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m backup &> /dev/null
     git branch -M ipuk &> /dev/null
-    git remote add origin https://github.com/myridwan/backup
-    git push -f https://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@github.com/myridwan/backup.git &> /dev/null
+    git remote add origin https://github.com/bezzo9699/backup
+    git push -f https://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@github.com/bezzo9699/backup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -154,7 +154,7 @@ sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/myridwan/backup/ipuk/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/bezzo9699/backup/ipuk/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Backup done "
 sleep 1
@@ -177,7 +177,7 @@ rm -rf /root/user-backup &> /dev/null
 rm -f /root/$NameUser.zip &> /dev/null
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • RidwanSTORE •                $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              • ThekillSTORE •                $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo
 read -n 1 -s -r -p "   Press any key to back on menu"
